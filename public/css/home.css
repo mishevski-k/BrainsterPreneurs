@@ -1,0 +1,94 @@
+@import url('./config.css');
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--clr-primary-600);
+}
+
+.banner{
+    justify-self: flex-start;
+    height: 30vh;
+    margin-top: 5rem;
+    color: var(--clr-neutral-200);
+    text-align: center;
+}
+
+.banner h1 {
+    text-transform: uppercase;
+    font-size: var(--fs-xl);
+}
+
+.banner h1 span {
+    color: var(--clr-secondary-600);
+}
+
+.changelog-container {
+    justify-self: center;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.changelog-container h1 {
+    font-size: var(--fs-xl);
+    color: var(--clr-secondary-200);
+    margin-bottom: 2rem;
+}
+
+.changelogs {
+    border: 3px solid var(--clr-secondary-200);
+    width: 80%;
+    min-height: 30vh;
+    text-align: left;
+    padding: 1rem 2rem;
+}
+
+.changelog {
+    font-size: var(--fs-m);
+    border-bottom: 1px solid var(--clr-secondary-600);
+    color: var(--clr-neutral-200);
+    margin-block: 0.8rem;
+}
+
+#version {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    font-size: var(--fs-m);
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--clr-secondary-200);
+}
+
+@media only screen and (max-width: 640px) {
+    .banner h1 {
+        font-size: var(--fs-l);
+    }
+
+    .banner p {
+        font-size: var(--fs-s);
+    }
+
+    .changelog-container h1 {
+        font-size: var(--fs-l);
+    }
+
+    .changelogs {
+        width: 95%;
+        padding: 1rem 0.5rem;
+    }
+
+    .changelog {
+        font-size: var(--fs-s);
+    }
+
+    #version {
+        font-size: var(--fs-s);
+    }
+}
